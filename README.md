@@ -10,4 +10,5 @@
 * sudo apt-get install solc
 ## Datadir and Dagdir
 * echo 'export ETHEREUM_HOME=/home/vijay/practice/session/ethereum-data'>>~/.bashrc
+* echo 'export ETHEREUM_DAG=/home/vijay/practice/session/ethereum-dag'>>~/.bashrc
 * . ~/.bashrc

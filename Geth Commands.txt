@@ -1,0 +1,35 @@
+# Initialize Node
+## Create A Genesis File with *.json extension
+* Please refer genesis.json in the current directory
+
+## Initialize Node with this genesis file
+* geth *--datadir* $ETHEREUM_HOME/nexthoughts init $ETHEREUM_HOME/genesis.json
+* geth *--datadir* $ETHEREUM_HOME/nexthoughts *--ethash.dagdir* $ETHEREUM_DAG init genesis.json
+
+## Start the Geth Console
+* geth --datadir $ETHEREUM_HOME/nexthoughts --networkid 1234 console 2>$ETHEREUM_HOME/nexthoughts_console.log
+## Check Node Information
+* admin.nodeInfo
+## Check the port of running Node
+## Check all Accounts on the Node
+* personal.listAccounts
+* eth.accounts
+## Check all Blocks on the Node
+* eth.blockNumber
+## Create an Account
+* personal.newAccount()
+## Check Account again
+* eth.blockNumber
+## Atach another console to the same geth console
+* geth attach ipc:$ETHEREUM_HOME/nexthoughts/geth.ipc
+## Check Admin Info of Node on both terminal
+## Check Block Details
+## Use of --nodiscover
+## Check peers on Node
+* admin.peers
+## Check miner of the block created in Node
+* eth.getBlock(eth.blockNumber).miner
+## Check Balance of the Account
+* eth.getBalance(eth.accounts[0])
+## Check Balance of the miner of Block
+* eth.getBalance(eth.getBlock(eth.blockNumber).miner)
